@@ -1,4 +1,4 @@
-// I AM NOT DONE
+// I AM DONE
 
 %lang starknet
 from starkware.cairo.common.bitwise import bitwise_and, bitwise_xor
@@ -16,5 +16,8 @@ from starkware.cairo.common.math import unsigned_div_rem
 func pattern{bitwise_ptr: BitwiseBuiltin*, range_check_ptr}(
     n: felt, idx: felt, exp: felt, broken_chain: felt
 ) -> (true: felt) {
-    return (0,);
+    alloc_locals;
+    let (local lsb_local) = bitwise_and(n, 1);
+
+
 }
